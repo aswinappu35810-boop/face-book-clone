@@ -14,6 +14,25 @@
             margin: 0;
             padding: 0;
         }
+        ::-webkit-scrollbar {
+        width: 9px;
+        }
+        ::-webkit-scrollbar-button {
+            display: none;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #BCC0C4;
+            border-radius: 99px;
+        }
+
+        ::-webkit-scrollbar-track:hover {
+            background: #E8EAED;
+        }
     </style>
     <script>
     tailwind.config = {
@@ -47,23 +66,48 @@
                    <div class="w-[115px] h-[50px] rounded-[12px] bg-transparent hover:bg-[#F2F2F2] cursor-pointer flex justify-center items-center"><img class="w-[42px] mt-[2px]" src="contacts.png" alt="reels"></div>
                    <div class="w-[115px] h-[50px] rounded-[12px] bg-transparent hover:bg-[#F2F2F2] cursor-pointer flex justify-center items-center"><img class="w-[60px] mt-[2px]" src="shop.png" alt="reels"></div>
                    <div class="w-[115px] h-[50px] rounded-[12px] bg-transparent hover:bg-[#F2F2F2] cursor-pointer flex justify-center items-center"><img class="w-[57px] h-[37px] mt-[2px]" src="games.png" alt="reels"></div>
-            </div>
-                <!-- facebook-mennu,manager,notification,profile  -->
-            <div class="left w-[320px]  h-[55px] flex justify-end items-center">
-                <div class="w-[183px] h-[55px]  mr-[33px] flex justify-between items-center">
-
-                    <div class="w-[39px] h-[39px] rounded-[30px] mt-[2px] mr-[3px] bg-[#E2E5E9]  flex justify-center items-center hover:bg-[#D6D9DD] cursor-pointer"><img class="w-[28px] ml-[1px]" src="menu.svg" alt=""></div>
-                    <div class="w-[39px] h-[39px] rounded-[30px] mt-[2px] mr-[3px] bg-[#E2E5E9]  flex justify-center items-center hover:bg-[#D6D9DD] cursor-pointer"><img class="w-[32px] ml-[1px]" src="messanger.png" alt=""></div>
-                    <div class="w-[39px] h-[39px] rounded-[30px] mt-[2px] mr-[3px] bg-[#E2E5E9]  relative flex justify-center items-center hover:bg-[#D6D9DD] cursor-pointer"><img class="w-[32px] ml-[1px]" src="bell.png" alt=""><div class="red-dot absolute w-[20px] h-[20px] rounded-[20px] bottom-[25px] left-[25px] flex justify-center items-center bg-red-600" ><p class="text-white text-[11px] font-[500]">10</p></div></div>
-                    <div class="w-[39px] h-[39px] rounded-[30px] mt-[2px] bg-transparent relative flex justify-center items-center cursor-pointer"><img class="w-[39px] h-[40px] rounded-[32px]" src="profile.png" alt=""><div class="arrow absolute w-[18px] h-[18px]  rounded-[20px] top-[25px] left-[25px] bg-[#E2E5E9] border-[3px] border-white"><img class="w-[15px] h-[15px]" src="down-arrow.svg" alt=""></div></div>
-                     
                 </div>
+                <!-- facebook-mennu,manager,notification,profile  -->
+                <div class="left w-[320px]  h-[55px] flex justify-end items-center">
+                    <div class="w-[183px] h-[55px]  mr-[33px] flex justify-between items-center">
+
+                        <div class="w-[39px] h-[39px] rounded-[30px] mt-[2px] mr-[3px] bg-[#E2E5E9]  flex justify-center items-center hover:bg-[#D6D9DD] cursor-pointer"><img class="w-[28px] ml-[1px]" src="menu.svg" alt=""></div>
+                        <div class="w-[39px] h-[39px] rounded-[30px] mt-[2px] mr-[3px] bg-[#E2E5E9]  flex justify-center items-center hover:bg-[#D6D9DD] cursor-pointer"><img class="w-[32px] ml-[1px]" src="messanger.png" alt=""></div>
+                        <div class="w-[39px] h-[39px] rounded-[30px] mt-[2px] mr-[3px] bg-[#E2E5E9]  relative flex justify-center items-center hover:bg-[#D6D9DD] cursor-pointer"><img class="w-[32px] ml-[1px]" src="bell.png" alt=""><div class="red-dot absolute w-[20px] h-[20px] rounded-[20px] bottom-[25px] left-[25px] flex justify-center items-center bg-red-600" ><p class="text-white text-[11px] font-[500]">10</p></div></div>
+                        <div class="w-[39px] h-[39px] rounded-[30px] mt-[2px] bg-transparent relative flex justify-center items-center cursor-pointer"><img class="w-[39px] h-[40px] rounded-[32px]" src="profile.png" alt=""><div class="arrow absolute w-[18px] h-[18px]  rounded-[20px] top-[25px] left-[25px] bg-[#E2E5E9] border-[3px] border-white"><img class="w-[15px] h-[15px]" src="down-arrow.svg" alt=""></div></div>
+                     
+                    </div>
             </div>
             
             
         </div>
 
-
+        <!-- side-bar -->
+         <div class="sidebar w-[350px] h-screen overflow-y-auto overflow-x-hidden scroll-hide">
+            <div class="w-[340px] h-[55px] rounded-[12px] bg-transparent hover:bg-[#E6E8EA] flex items-center justify-start gap-[15px] ml-[10px] cursor-pointer mt-[18px]"><img class="w-[35px] h-[36px] ml-[5px] rounded-[40px]" src="profile.png" alt=""><p class="font-poppins font-[500] text-[#080809] text-[14px]">Aswin p</p></div>
+            <div class="w-[340px] h-[55px] rounded-[12px] bg-transparent hover:bg-[#E6E8EA] flex items-center justify-start gap-[15px] ml-[10px] cursor-pointer mt-[0px]"><img class="w-[33px] h-[33px] ml-[7px] rounded-[40px]" src="flower.png" alt=""><p class="font-poppins font-[500] text-[#080809] text-[14px]">Meta AI</p></div>
+            <div class="w-[340px] h-[55px] rounded-[12px] bg-transparent hover:bg-[#E6E8EA] flex items-center justify-start gap-[15px] ml-[10px] cursor-pointer mt-[0px]"><img class="w-[33px] h-[33px] ml-[7px] rounded-[40px]" src="follower.png" alt=""><p class="font-poppins font-[500] text-[#080809] text-[14px]">Freinds</p></div>
+            <div class="w-[340px] h-[55px] rounded-[12px] bg-transparent hover:bg-[#E6E8EA] flex items-center justify-start gap-[15px] ml-[10px] cursor-pointer mt-[0px]"><img class="w-[33px] h-[33px] ml-[7px] rounded-[40px]" src="clock.png" alt=""><p class="font-poppins font-[500] text-[#080809] text-[14px]">Memories</p></div>
+            <div class="w-[340px] h-[55px] rounded-[12px] bg-transparent hover:bg-[#E6E8EA] flex items-center justify-start gap-[15px] ml-[10px] cursor-pointer mt-[0px]"><img class="w-[33px] h-[33px] ml-[7px] rounded-[40px]" src="saved.png" alt=""><p class="font-poppins font-[500] text-[#080809] text-[14px]">Saved</p></div>
+            <div class="w-[340px] h-[55px] rounded-[12px] bg-transparent hover:bg-[#E6E8EA] flex items-center justify-start gap-[15px] ml-[10px] cursor-pointer mt-[0px]"><img class="w-[33px] h-[33px] ml-[7px] rounded-[40px]" src="group.png" alt=""><p class="font-poppins font-[500] text-[#080809] text-[14px]">Group</p></div>
+            <div class="w-[340px] h-[55px] rounded-[12px] bg-transparent hover:bg-[#E6E8EA] flex items-center justify-start gap-[15px] ml-[10px] cursor-pointer mt-[0px]"><img class="w-[30px] h-[30px] ml-[7px] rounded-[40px]" src="reel.png" alt=""><p class="font-poppins font-[500] text-[#080809] text-[14px]">Reels</p></div>
+            <div class="w-[340px] h-[55px] rounded-[12px] bg-transparent hover:bg-[#E6E8EA] flex items-center justify-start gap-[15px] ml-[10px] cursor-pointer mt-[0px]"><img class="w-[45px] h-[45px] rounded-[40px]" src="home.png" alt=""><p class="font-poppins font-[500] text-[#080809] text-[14px]">Marketplace</p></div>
+            <div class="w-[340px] h-[55px] rounded-[12px] bg-transparent hover:bg-[#E6E8EA] flex items-center justify-start gap-[15px] ml-[10px] cursor-pointer mt-[0px]"><img class="w-[33px] h-[33px] ml-[7px] rounded-[40px]" src="feed.png" alt=""><p class="font-poppins font-[500] text-[#080809] text-[14px]">Feed</p></div>
+            <div class="w-[340px] h-[55px] rounded-[12px] bg-transparent hover:bg-[#E6E8EA] flex items-center justify-start gap-[15px] ml-[10px] cursor-pointer mt-[0px]"><img class="w-[33px] h-[33px] ml-[7px] rounded-[40px]" src="calander.png" alt=""><p class="font-poppins font-[500] text-[#080809] text-[14px]">Events</p></div>
+            <div class="w-[340px] h-[55px] rounded-[12px] bg-transparent hover:bg-[#E6E8EA] flex items-center justify-start gap-[15px] ml-[10px] cursor-pointer mt-[0px]"><img class="w-[33px] h-[33px] ml-[7px] rounded-[40px]" src="adds-manager.png" alt=""><p class="font-poppins font-[500] text-[#080809] text-[14px]">Ads Manager</p></div>
+            <div class="w-[340px] h-[55px] rounded-[12px] bg-transparent hover:bg-[#E6E8EA] flex items-center justify-start gap-[15px] ml-[10px] cursor-pointer mt-[0px]"><div class="w-[33px] h-[33px] ml-[7px] rounded-[40px] bg-[#D6D9DD] flex justify-center items-center"><img class="w-[20px] h-[20px]" src="down-arrow.svg" alt=""></div><p class="font-poppins font-[500] text-[#080809] text-[14px]">See More</p></div>
+            <div class="w-[350px] min-h-[55px] rounded-[12px] bg-transparent flex flex-col items-start justify-center mt-[10px] text-[12px] text-[#86888C] font-poppins font-[600]">
+            <div class="flex w-full h-full items-start justify-start gap-[5px] ml-[15px]">   
+                <p class="cursor-pointer hover:underline">privacy</p><div class="w-[2px] h-[2px] rounded-[2px] bg-[#86888C] mt-[8px]"></div>
+                <p class="cursor-pointer hover:underline">Terms</p><div class="w-[2px] h-[2px] rounded-[2px] bg-[#86888C] mt-[8px]"></div>
+                <p class="cursor-pointer hover:underline">Advertising</p><div class="w-[2px] h-[2px] rounded-[2px] bg-[#86888C] mt-[8px]"></div>
+                <p class="cursor-pointer hover:underline">Ad choices</p><div class="w-[2px] h-[2px] rounded-[2px] bg-[#86888C] mt-[8px]"></div>
+                <p class="cursor-pointer hover:underline">Cookies</p><div class="w-[2px] h-[2px] rounded-[2px] bg-[#86888C] mt-[8px]"></div></div> 
+            <div class="w-full h-full mb-[5px] ml-[15px]"> 
+                <p class="cursor-pointer">More</p>
+            </div>
+            </div>
+            
 
 
 
