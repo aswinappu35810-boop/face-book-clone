@@ -5,34 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Face book</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="icon" type="jpg/png" href="facebook-brands-solid.png">
+    <link rel="icon"  href="facebook-brands-solid.png">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <style>
         *{
             margin: 0;
             padding: 0;
         }
-        ::-webkit-scrollbar {
-        width: 9px;
+        body{
+            background-color: #F2F4F7;
         }
-        ::-webkit-scrollbar-button {
+        .sidebar::-webkit-scrollbar {
+            width: 9px;
             display: none;
         }
 
-        ::-webkit-scrollbar-track {
+        .sidebar::-webkit-scrollbar-track {
             background: transparent;
         }
 
-        ::-webkit-scrollbar-thumb {
+        .sidebar::-webkit-scrollbar-thumb {
             background: #BCC0C4;
-            border-radius: 99px;
+            border-radius: 9999px;
         }
 
-        ::-webkit-scrollbar-track:hover {
-            background: #E8EAED;
+        .sidebar::-webkit-scrollbar-button {
+            display: none;
         }
+        .BOX{
+            background-color: white;
+        }
+        .grid-items{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(4, 180px);
+            gap: 3px;
+            grid-template-areas: "box-1 box-2"
+                                 "box-1 box-3"
+                                 "box-4 box-3"
+                                 "box-4 box-5";
+        }
+        .pluse i{
+            color: #000000;
+        }
+
     </style>
     <script>
     tailwind.config = {
@@ -48,9 +67,9 @@
 </head>
 <body>
     <!-- container  -->
-    <div class="container w-screen h-screen flex flex-col bg-[#F2F4F7] font-Poppins">
+    <div class="container w-screen h-fit flex flex-col bg-[#F2F4F7] font-Poppins ">
             <!-- navbar  -->
-        <div class="navbar w-screen h-[55px] bg-white shadow-md flex justify-between items-center">
+        <div class="navbar fixed w-screen h-[55px] z-50 bg-white shadow-md flex justify-between items-center">
                     <!-- facebook-searchbar  -->
             <div class="w-[310px]  h-[55px] flex justify-center items-center">
                 <img class="w-[50px] ml-[3px] " src="facebook-og.svg" alt="">
@@ -71,10 +90,22 @@
                 <div class="left w-[320px]  h-[55px] flex justify-end items-center">
                     <div class="w-[183px] h-[55px]  mr-[33px] flex justify-between items-center">
 
-                        <div class="w-[39px] h-[39px] rounded-[30px] mt-[2px] mr-[3px] bg-[#E2E5E9]  flex justify-center items-center hover:bg-[#D6D9DD] cursor-pointer"><img class="w-[28px] ml-[1px]" src="menu.svg" alt=""></div>
-                        <div class="w-[39px] h-[39px] rounded-[30px] mt-[2px] mr-[3px] bg-[#E2E5E9]  flex justify-center items-center hover:bg-[#D6D9DD] cursor-pointer"><img class="w-[32px] ml-[1px]" src="messanger.png" alt=""></div>
-                        <div class="w-[39px] h-[39px] rounded-[30px] mt-[2px] mr-[3px] bg-[#E2E5E9]  relative flex justify-center items-center hover:bg-[#D6D9DD] cursor-pointer"><img class="w-[32px] ml-[1px]" src="bell.png" alt=""><div class="red-dot absolute w-[20px] h-[20px] rounded-[20px] bottom-[25px] left-[25px] flex justify-center items-center bg-red-600" ><p class="text-white text-[11px] font-[500]">10</p></div></div>
-                        <div class="w-[39px] h-[39px] rounded-[30px] mt-[2px] bg-transparent relative flex justify-center items-center cursor-pointer"><img class="w-[39px] h-[40px] rounded-[32px]" src="profile.png" alt=""><div class="arrow absolute w-[18px] h-[18px]  rounded-[20px] top-[25px] left-[25px] bg-[#E2E5E9] border-[3px] border-white"><img class="w-[15px] h-[15px]" src="down-arrow.svg" alt=""></div></div>
+                        <div class="w-[39px] h-[39px] rounded-[30px] mt-[2px] mr-[3px] bg-[#E2E5E9]  flex justify-center items-center hover:bg-[#D6D9DD] cursor-pointer">
+                            <img class="w-[28px] ml-[1px]" src="menu.svg" alt=""></div>
+                        <div class="w-[39px] h-[39px] rounded-[30px] mt-[2px] mr-[3px] bg-[#E2E5E9]  flex justify-center items-center hover:bg-[#D6D9DD] cursor-pointer">
+                            <img class="w-[32px] ml-[1px]" src="messanger.png" alt=""></div>
+                        <div class="w-[39px] h-[39px] rounded-[30px] mt-[2px] mr-[3px] bg-[#E2E5E9]  relative flex justify-center items-center hover:bg-[#D6D9DD] cursor-pointer">
+                            <img class="w-[32px] ml-[1px]" src="bell.png" alt="">
+                            <div class="red-dot absolute w-[20px] h-[20px] rounded-[20px] bottom-[25px] left-[25px] flex justify-center items-center bg-red-600" >
+                                <p class="text-white text-[11px] font-[500]">10</p>
+                            </div>
+                        </div>
+                        <div class="w-[39px] h-[39px] rounded-[30px] mt-[2px] bg-transparent relative flex justify-center items-center cursor-pointer">
+                            <img class="w-[39px] h-[40px] rounded-[32px] hover:brightness-[0.93]" src="profile.png" alt="">
+                            <div class="arrow absolute w-[18px] h-[18px]  rounded-[20px] top-[25px] left-[25px] bg-[#E2E5E9] border-[3px] border-white">
+                                <img class="w-[15px] h-[15px]" src="down-arrow.svg" alt="">
+                            </div>
+                        </div>
                      
                     </div>
             </div>
@@ -82,35 +113,347 @@
             
         </div>
 
-        <!-- side-bar -->
-         <div class="sidebar w-[350px] h-screen overflow-y-auto overflow-x-hidden scroll-hide">
-            <div class="w-[340px] h-[55px] rounded-[12px] bg-transparent hover:bg-[#E6E8EA] flex items-center justify-start gap-[15px] ml-[10px] cursor-pointer mt-[18px]"><img class="w-[35px] h-[36px] ml-[5px] rounded-[40px]" src="profile.png" alt=""><p class="font-poppins font-[500] text-[#080809] text-[14px]">Aswin p</p></div>
-            <div class="w-[340px] h-[55px] rounded-[12px] bg-transparent hover:bg-[#E6E8EA] flex items-center justify-start gap-[15px] ml-[10px] cursor-pointer mt-[0px]"><img class="w-[33px] h-[33px] ml-[7px] rounded-[40px]" src="flower.png" alt=""><p class="font-poppins font-[500] text-[#080809] text-[14px]">Meta AI</p></div>
-            <div class="w-[340px] h-[55px] rounded-[12px] bg-transparent hover:bg-[#E6E8EA] flex items-center justify-start gap-[15px] ml-[10px] cursor-pointer mt-[0px]"><img class="w-[33px] h-[33px] ml-[7px] rounded-[40px]" src="follower.png" alt=""><p class="font-poppins font-[500] text-[#080809] text-[14px]">Freinds</p></div>
-            <div class="w-[340px] h-[55px] rounded-[12px] bg-transparent hover:bg-[#E6E8EA] flex items-center justify-start gap-[15px] ml-[10px] cursor-pointer mt-[0px]"><img class="w-[33px] h-[33px] ml-[7px] rounded-[40px]" src="clock.png" alt=""><p class="font-poppins font-[500] text-[#080809] text-[14px]">Memories</p></div>
-            <div class="w-[340px] h-[55px] rounded-[12px] bg-transparent hover:bg-[#E6E8EA] flex items-center justify-start gap-[15px] ml-[10px] cursor-pointer mt-[0px]"><img class="w-[33px] h-[33px] ml-[7px] rounded-[40px]" src="saved.png" alt=""><p class="font-poppins font-[500] text-[#080809] text-[14px]">Saved</p></div>
-            <div class="w-[340px] h-[55px] rounded-[12px] bg-transparent hover:bg-[#E6E8EA] flex items-center justify-start gap-[15px] ml-[10px] cursor-pointer mt-[0px]"><img class="w-[33px] h-[33px] ml-[7px] rounded-[40px]" src="group.png" alt=""><p class="font-poppins font-[500] text-[#080809] text-[14px]">Group</p></div>
-            <div class="w-[340px] h-[55px] rounded-[12px] bg-transparent hover:bg-[#E6E8EA] flex items-center justify-start gap-[15px] ml-[10px] cursor-pointer mt-[0px]"><img class="w-[30px] h-[30px] ml-[7px] rounded-[40px]" src="reel.png" alt=""><p class="font-poppins font-[500] text-[#080809] text-[14px]">Reels</p></div>
-            <div class="w-[340px] h-[55px] rounded-[12px] bg-transparent hover:bg-[#E6E8EA] flex items-center justify-start gap-[15px] ml-[10px] cursor-pointer mt-[0px]"><img class="w-[45px] h-[45px] rounded-[40px]" src="home.png" alt=""><p class="font-poppins font-[500] text-[#080809] text-[14px]">Marketplace</p></div>
-            <div class="w-[340px] h-[55px] rounded-[12px] bg-transparent hover:bg-[#E6E8EA] flex items-center justify-start gap-[15px] ml-[10px] cursor-pointer mt-[0px]"><img class="w-[33px] h-[33px] ml-[7px] rounded-[40px]" src="feed.png" alt=""><p class="font-poppins font-[500] text-[#080809] text-[14px]">Feed</p></div>
-            <div class="w-[340px] h-[55px] rounded-[12px] bg-transparent hover:bg-[#E6E8EA] flex items-center justify-start gap-[15px] ml-[10px] cursor-pointer mt-[0px]"><img class="w-[33px] h-[33px] ml-[7px] rounded-[40px]" src="calander.png" alt=""><p class="font-poppins font-[500] text-[#080809] text-[14px]">Events</p></div>
-            <div class="w-[340px] h-[55px] rounded-[12px] bg-transparent hover:bg-[#E6E8EA] flex items-center justify-start gap-[15px] ml-[10px] cursor-pointer mt-[0px]"><img class="w-[33px] h-[33px] ml-[7px] rounded-[40px]" src="adds-manager.png" alt=""><p class="font-poppins font-[500] text-[#080809] text-[14px]">Ads Manager</p></div>
-            <div class="w-[340px] h-[55px] rounded-[12px] bg-transparent hover:bg-[#E6E8EA] flex items-center justify-start gap-[15px] ml-[10px] cursor-pointer mt-[0px]"><div class="w-[33px] h-[33px] ml-[7px] rounded-[40px] bg-[#D6D9DD] flex justify-center items-center"><img class="w-[20px] h-[20px]" src="down-arrow.svg" alt=""></div><p class="font-poppins font-[500] text-[#080809] text-[14px]">See More</p></div>
-            <div class="w-[350px] min-h-[55px] rounded-[12px] bg-transparent flex flex-col items-start justify-center mt-[10px] text-[12px] text-[#86888C] font-poppins font-[600]">
-            <div class="flex w-full h-full items-start justify-start gap-[5px] ml-[15px]">   
-                <p class="cursor-pointer hover:underline">privacy</p><div class="w-[2px] h-[2px] rounded-[2px] bg-[#86888C] mt-[8px]"></div>
-                <p class="cursor-pointer hover:underline">Terms</p><div class="w-[2px] h-[2px] rounded-[2px] bg-[#86888C] mt-[8px]"></div>
-                <p class="cursor-pointer hover:underline">Advertising</p><div class="w-[2px] h-[2px] rounded-[2px] bg-[#86888C] mt-[8px]"></div>
-                <p class="cursor-pointer hover:underline">Ad choices</p><div class="w-[2px] h-[2px] rounded-[2px] bg-[#86888C] mt-[8px]"></div>
-                <p class="cursor-pointer hover:underline">Cookies</p><div class="w-[2px] h-[2px] rounded-[2px] bg-[#86888C] mt-[8px]"></div></div> 
-            <div class="w-full h-full mb-[5px] ml-[15px]"> 
-                <p class="cursor-pointer">More</p>
-            </div>
-            </div>
+        
+        <div class="flex justify-between pt-[55px] bg-[#F2F4F7] w-fit min-h-fit">
             
+            <!-- side-bar -->
+            <div class="sidebar fixed left-0 top-[55px] w-[350px] h-[calc(100vh-55px)] overflow-y-auto overflow-x-hidden scroll-hide">
+                <div class="w-[340px] h-[55px] rounded-[12px] bg-transparent hover:bg-[#E6E8EA] flex items-center justify-start gap-[15px] ml-[10px] cursor-pointer mt-[18px]"><img class="w-[35px] h-[36px] ml-[5px] rounded-[40px]" src="profile.png" alt=""><p class="font-poppins font-[500] text-[#080809] text-[14px]">Aswin p</p></div>
+                <div class="w-[340px] h-[55px] rounded-[12px] bg-transparent hover:bg-[#E6E8EA] flex items-center justify-start gap-[15px] ml-[10px] cursor-pointer mt-[0px]"><img class="w-[33px] h-[33px] ml-[7px] rounded-[40px]" src="flower.png" alt=""><p class="font-poppins font-[500] text-[#080809] text-[14px]">Meta AI</p></div>
+                <div class="w-[340px] h-[55px] rounded-[12px] bg-transparent hover:bg-[#E6E8EA] flex items-center justify-start gap-[15px] ml-[10px] cursor-pointer mt-[0px]"><img class="w-[33px] h-[33px] ml-[7px] rounded-[40px]" src="follower.png" alt=""><p class="font-poppins font-[500] text-[#080809] text-[14px]">Freinds</p></div>
+                <div class="w-[340px] h-[55px] rounded-[12px] bg-transparent hover:bg-[#E6E8EA] flex items-center justify-start gap-[15px] ml-[10px] cursor-pointer mt-[0px]"><img class="w-[33px] h-[33px] ml-[7px] rounded-[40px]" src="clock.png" alt=""><p class="font-poppins font-[500] text-[#080809] text-[14px]">Memories</p></div>
+                <div class="w-[340px] h-[55px] rounded-[12px] bg-transparent hover:bg-[#E6E8EA] flex items-center justify-start gap-[15px] ml-[10px] cursor-pointer mt-[0px]"><img class="w-[33px] h-[33px] ml-[7px] rounded-[40px]" src="saved.png" alt=""><p class="font-poppins font-[500] text-[#080809] text-[14px]">Saved</p></div>
+                <div class="w-[340px] h-[55px] rounded-[12px] bg-transparent hover:bg-[#E6E8EA] flex items-center justify-start gap-[15px] ml-[10px] cursor-pointer mt-[0px]"><img class="w-[33px] h-[33px] ml-[7px] rounded-[40px]" src="group.png" alt=""><p class="font-poppins font-[500] text-[#080809] text-[14px]">Group</p></div>
+                <div class="w-[340px] h-[55px] rounded-[12px] bg-transparent hover:bg-[#E6E8EA] flex items-center justify-start gap-[15px] ml-[10px] cursor-pointer mt-[0px]"><img class="w-[30px] h-[30px] ml-[7px] rounded-[40px]" src="reel.png" alt=""><p class="font-poppins font-[500] text-[#080809] text-[14px]">Reels</p></div>
+                <div class="w-[340px] h-[55px] rounded-[12px] bg-transparent hover:bg-[#E6E8EA] flex items-center justify-start gap-[15px] ml-[10px] cursor-pointer mt-[0px]"><img class="w-[45px] h-[45px] rounded-[40px]" src="home.png" alt=""><p class="font-poppins font-[500] text-[#080809] text-[14px]">Marketplace</p></div>
+                <div class="w-[340px] h-[55px] rounded-[12px] bg-transparent hover:bg-[#E6E8EA] flex items-center justify-start gap-[15px] ml-[10px] cursor-pointer mt-[0px]"><img class="w-[33px] h-[33px] ml-[7px] rounded-[40px]" src="feed.png" alt=""><p class="font-poppins font-[500] text-[#080809] text-[14px]">Feed</p></div>
+                <div class="w-[340px] h-[55px] rounded-[12px] bg-transparent hover:bg-[#E6E8EA] flex items-center justify-start gap-[15px] ml-[10px] cursor-pointer mt-[0px]"><img class="w-[33px] h-[33px] ml-[7px] rounded-[40px]" src="calander.png" alt=""><p class="font-poppins font-[500] text-[#080809] text-[14px]">Events</p></div>
+                <div class="w-[340px] h-[55px] rounded-[12px] bg-transparent hover:bg-[#E6E8EA] flex items-center justify-start gap-[15px] ml-[10px] cursor-pointer mt-[0px]"><img class="w-[33px] h-[33px] ml-[7px] rounded-[40px]" src="adds-manager.png" alt=""><p class="font-poppins font-[500] text-[#080809] text-[14px]">Ads Manager</p></div>
+                <div class="w-[340px] h-[55px] rounded-[12px] bg-transparent hover:bg-[#E6E8EA] flex items-center justify-start gap-[15px] ml-[10px] cursor-pointer mt-[0px]"><div class="w-[33px] h-[33px] ml-[7px] rounded-[40px] bg-[#D6D9DD] flex justify-center items-center"><img class="w-[20px] h-[20px]" src="down-arrow.svg" alt=""></div><p class="font-poppins font-[500] text-[#080809] text-[14px]">See More</p></div>
+                <div class="w-[350px] min-h-[55px] rounded-[12px] bg-transparent flex flex-col items-start justify-center mt-[10px] text-[12px] text-[#86888C] font-poppins font-[600]">
+                    <div class="flex w-full h-full items-start justify-start gap-[5px] ml-[15px]">   
+                        <p class="cursor-pointer hover:underline">privacy</p><div class="w-[2px] h-[2px] rounded-[2px] bg-[#86888C] mt-[8px]"></div>
+                        <p class="cursor-pointer hover:underline">Terms</p><div class="w-[2px] h-[2px] rounded-[2px] bg-[#86888C] mt-[8px]"></div>
+                        <p class="cursor-pointer hover:underline">Advertising</p><div class="w-[2px] h-[2px] rounded-[2px] bg-[#86888C] mt-[8px]"></div>
+                        <p class="cursor-pointer hover:underline">Ad choices</p><div class="w-[2px] h-[2px] rounded-[2px] bg-[#86888C] mt-[8px]"></div>
+                        <p class="cursor-pointer hover:underline">Cookies</p><div class="w-[2px] h-[2px] rounded-[2px] bg-[#86888C] mt-[8px]"></div></div> 
+                        <div class="w-full h-full mb-[5px] ml-[15px]"> 
+                            <p class="cursor-pointer">More</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- post-section -->
+                <div class="post-section w-[680px] ml-[420px] h-fit  flex flex-col">
+                    <!-- write your section -->
+                    <div class="w-[680px] h-[62px] bg-[#FFFFFF] mt-[18px] rounded-[12px] flex shadow-md justify-start items-center">
+                        <div class="w-[40px] h-[40px] rounded-[40px] ml-[17px] bg-transparent relative flex justify-center items-center cursor-pointer">
+                                <img class="w-[41px] h-[41px] rounded-[32px] hover:brightness-[0.93]" src="profile.png" alt="">
+                        </div>
+                        <div class="w-[472px] h-[40px] rounded-[50px] ml-[7px] bg-[#F0F2F5] hover:bg-[#E4E6E9] flex justify-center items-center">
+                            <input type="text" placeholder="What's on  your mind,Aswin?"  class="w-full h-full pl-[15px] placeholder-[#606366] bg-transparent">
+                        </div>
+                        <div class="w-[40px] h-[40px] rounded-[12px] hover:bg-[#F2F2F2] ml-[8px] flex justify-center items-center">
+                            <img class="w-[70px] h-[50px]" src="video.png" alt="">
+                        </div>
+                        <div class="w-[40px] h-[40px] rounded-[12px] hover:bg-[#F2F2F2] flex justify-center items-center">
+                            <img class="w-[30px] h-[30px]" src="images.png" alt="">
+                        </div>
+                        <div class="w-[40px] h-[40px] rounded-[12px] hover:bg-[#F2F2F2] flex justify-center items-center">
+                            <img class="w-[30px] h-[30px]" src="happy.png" alt="">
+                        </div>
+                    </div>
+                    <!-- create story -->
+                    <!-- <div class="w-[680px] h-[72px] bg-[#ffffff] mt-[12px] shadow-md rounded-[12px] flex justify-center items-center">
+                        <div class="w-[660px] h-[55px] hover:bg-[#F2F2F2] rounded-[12px] flex justify-start items-center">
+                            <div class="w-[41px] h-[41px] rounded-[41px] bg-[#EBF5FF] ml-[5px] text-[#0866FF] font-poppins font-[400] text-[27px] flex justify-center items-center">
+                                <p class="mt-[1px] ml-[1px]">+</p>
+                            </div>
+                            <div class="flex flex-col w-[590px] h-full ml-[13px] justify-center">
+                                <p class="text-[16px] font-poppins font-[500] mb-[3px]">Create story</p>
+                                <p class="text-[15px] mt-[-5px] text-[#606366]">share a photo or video or write something</p>
+                            </div>
+                        </div>
+                        
+                    </div> -->
+                    <!-- Stories -->
+                <div class="flex gap-[8px] mt-[10px]">
+                    <!-- Create Story -->
+                    <div class="w-[115px] h-[164px] bg-white rounded-[12px] shadow overflow-hidden cursor-pointer hover:brightness-[0.93] transition-all duration-200">
+
+                        <!-- Image -->
+                        <div class="w-full h-[120px] overflow-hidden">
+                            <img src="profile.png" class="w-full h-full object-cover transition-duration-300 hover:scale-[1.03]" alt="">
+                        </div>
+
+                        <!-- Plus Button -->
+                        <div class="flex justify-center mt-[-20px] relative">
+                            <div class="w-[38px] h-[38px] rounded-full bg-[#0866FF] border-[4px] border-white flex justify-center items-center">
+                                <i class="bi bi-plus text-white text-[22px]"></i>
+                            </div>
+                        </div>
+
+                        <p class="text-[13px] font-semibold text-center mt-[1px]">
+                            Create story
+                        </p>
+
+                    </div>
+
+                    <!-- Story 1 -->
+                    <div class="group relative w-[115px] h-[164px] rounded-[12px] shadow overflow-hidden cursor-pointer hover:brightness-[0.93] transition-all duration-200">
+
+                        <!-- Story Image -->
+                        <img src="celina-story.jpg" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-[1.03]" alt="">
+
+                        <!-- Profile -->
+                        <img src="celina.jpg" class="absolute top-[12px] left-[12px] w-[38px] h-[38px] rounded-full border-[4px] border-[#0866FF]" alt="">
+
+                        <!-- Name -->
+                        <p class="absolute bottom-[11px] left-[12px] text-[13px] font-semibold text-white leading-[16px]">
+                            Celina Dept
+                        </p>
+
+                    </div>
+
+                    <!-- story 2  -->
+                    <div class="group relative w-[115px] h-[164px] rounded-[12px] shadow overflow-hidden cursor-pointer hover:brightness-[0.93] transition-all duration-200">
+
+                        <!-- Story Image -->
+                        <img src="copa america.jpg" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-[1.03]" alt="">
+
+                        <!-- Profile -->
+                        <img src="storyprofile-2.jpg" class="absolute top-[12px] left-[12px] w-[38px] h-[38px] rounded-full border-[4px] border-[#0866FF]" alt="">
+
+                        <!-- Name -->
+                        <p class="absolute bottom-[11px] left-[12px] text-[13px] font-semibold text-white leading-[16px]">
+                            Copa America
+                        </p>
+
+                    </div>          
+                </div>
 
 
 
+
+
+
+                    <!-- post 1 -->
+                    <div class="firstpost bg-white h-fit rounded-[12px] shadow-md mt-[10px] flex flex-col justify-between">
+                        <!-- header-section post -->
+                        <div class="w-full h-[90px] bg-transparent flex flex-col justify-center">
+                            <div class="w-full h-full pl-[12px] flex items-center justify-between font-poppins">
+                                <div class="flex w-[350px] h-[42px]">
+                                    <img class="w-[41px] h-[41px] rounded-[41px]  mt-[8px] cursor-pointer" src="speed.jpg" alt="">
+                                    <div class="flex flex-col w-full h-full ">
+                                        <div class="flex items-center ml-[7px] gap-[0px] text-[14px] ">
+                                            <p class="cursor-pointer hover:underline">IshowSpeed</p> 
+                                        <div class="ml-[-5px] mt-[-3px]"> <img class="w-[30px] h-[30px]" src="verified.png" alt=""></div>
+                                            <div class="w-[2px] h-[2px] rounded-[2px] bg-black mt-[0px] ml-[-5px]"></div>
+                                            <p class="cursor-pointer hover:underline font-poppins ml-[5px] text-[#0064D1]">Follow</p> 
+                                        </div>
+                                        <div class="flex text-[12px] text-[#818487] items-center ml-[7px] mt-[-10px]">
+                                            <p class="cursor-pointer hover:underline">7 july at 3.39</p> 
+                                            <div class="w-[2px] h-[2px] rounded-[2px] bg-black ml-[4px] "></div>
+                                            <div class="ml-[-7px]"><img class="w-[35px] h-[35px]" src="earth.png" alt=""></div>  
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex mr-[20px] gap-[10px] mt-[5px] justify-center items-center">
+                                    <div class="w-[40px] h-[40px] rounded-[40px] hover:bg-[#F2F2F2] flex justify-center cursor-pointer items-center mr-[-10px]"><img class="w-[25px] h-[25px]" src="more.svg" alt=""></div>
+                                    <div class="w-[40px] h-[40px] rounded-[40px] hover:bg-[#F2F2F2] flex justify-center cursor-pointer items-center"><img class="w-[25px] h-[25px]" src="close.svg" alt=""></div>
+                                </div>
+                            </div>
+                            <div class="ml-[12px] mb-[8px]"><p class="font-poppins text-[14px] ">i'm sorry ronaldo 💔💔</p></div>
+                        </div>
+                        <!-- vedio -->
+                        <div class="w-full h-[560px] bg-black cursor-pointer ">
+                            <video class="w-full h-full object-contain"  src="video.mp4" controls autoplay></video>
+                        </div>
+                        <div class="w-full h-[40px] justify-between  bg-transparent flex">
+                            <div class="flex items-center text-[12px] text-[#606366] font-[500] font-poppins"> 
+                                <div class="w-[87px] pl-[5px] h-full flex items-center hover:bg-[#F2F2F2] cursor-pointer rounded-bl-[12px] ">
+                                    <img  class="w-[38px] h-[38px]" src="like.png" alt="">
+                                    <p>5.1M</p>
+                                </div>
+                                <div class="w-[80px] pl-[5px] h-full flex items-center cursor-pointer hover:bg-[#F2F2F2]">
+                                    <img class="w-[65px] h-[52px] ml-[-20px]" src="comment.png" alt="">
+                                    <p class="ml-[-15px]">95.4K</p>
+                                </div>
+                                <div class="w-[87px] pl-[5px] h-full flex items-center cursor-pointer hover:bg-[#F2F2F2]">
+                                    <img class="w-[35px] h-[35px] " src="share.png" alt="">
+                                    <p class="ml-[3px]">52K</p>
+                                </div>
+
+                            </div>
+                            <div class="w-[90px] pl-[25px] h-full flex items-center">
+                                <img class="w-[20px] border-[2px] rounded-[35px] border-white" src="thumbs-upblue.png" alt="">
+                                <img class="w-[23px] h-[23px] ml-[-5px]" src="red-like.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+                    <!-- POST-2  -->
+                    <div class="secondpost bg-white  h-fit flex flex-col justify-between rounded-[12px] shadow-md w-full mt-[10px]">
+                        <!-- header-section post -->
+                        <div class="w-full h-[90px] bg-transparent flex flex-col justify-center">
+                            <div class="w-full h-full pl-[12px] flex items-center justify-between font-poppins">
+                                <div class="flex w-[350px] h-[42px]">
+
+                                    <!-- profile  -->
+                                <div class="w-[53px] h-[48px] rounded-full relative bg-[#0866FF] flex items-center justify-center"> <img class="cursor-pointer mt-[1px] border-[2px] border-white object-contain rounded-full" src="celina.jpg" alt=""></div>
+
+
+                                    
+                                    <div class="flex flex-col w-full h-full ">
+                                        <div class="flex items-center ml-[7px] gap-[0px] text-[14px] ">
+                                            <p class="cursor-pointer hover:underline">Celina Dept</p> 
+                                        <div class="ml-[-5px] mt-[-3px]"> <img class="w-[30px] h-[30px]" src="verified.png" alt=""></div>
+                                            <!-- <div class="w-[2px] h-[2px] rounded-[2px] bg-black mt-[0px] ml-[-5px]"></div> -->
+                                            <!-- <p class="cursor-pointer hover:underline font-poppins ml-[5px] text-[#0064D1]">Follow</p>  -->
+                                        </div>
+                                        <div class="flex text-[12px] text-[#818487] items-center ml-[7px] mt-[-10px]">
+                                            <p class="cursor-pointer hover:underline">30 june at 20.44</p> 
+                                            <div class="w-[2px] h-[2px] rounded-[2px] bg-black ml-[4px] "></div>
+                                            <div class="ml-[-7px]"><img class="w-[35px] h-[35px]" src="earth.png" alt=""></div>  
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex mr-[20px] gap-[10px] mt-[5px] justify-center items-center">
+                                    <div class="w-[40px] h-[40px] rounded-[40px] hover:bg-[#F2F2F2] cursor-pointer flex justify-center items-center mr-[-10px]"><img class="w-[25px] h-[25px]" src="more.svg" alt=""></div>
+                                    <div class="w-[40px] h-[40px] rounded-[40px] hover:bg-[#F2F2F2] cursor-pointer flex justify-center items-center"><img class="w-[25px] h-[25px]" src="close.svg" alt=""></div>
+                                </div>
+                            </div>
+                            <div class="ml-[12px] mb-[8px]"><p class="font-poppins text-[14px] " cursor-pointer>Which World Cup player did it better? 🤝🔊 (you know my answer already..)</p></div>
+                        </div>
+
+
+
+                        <!-- vedio -->
+                        <div class="w-full h-[560px] bg-black cursor-pointer ">
+                            <video class="w-full h-full object-contain "  src="celina-post.mp4" controls autoplay></video>
+                        </div>
+
+
+
+                        <div class="w-full h-[40px] justify-between  bg-transparent flex">
+                            <div class="flex items-center text-[12px] text-[#606366] font-[500] font-poppins"> 
+                                <div class="w-[87px] pl-[5px] h-full flex items-center cursor-pointer hover:bg-[#F2F2F2] rounded-bl-[12px] ">
+                                    <img  class="w-[38px] h-[38px]" src="like.png" alt="">
+                                    <p>1.6M</p>
+                                </div>
+                                <div class="w-[70px] pl-[5px] h-full flex items-center cursor-pointer hover:bg-[#F2F2F2]">
+                                    <img class="w-[65px] h-[52px] ml-[-20px]" src="comment.png" alt="">
+                                    <p class="ml-[-15px]">4K</p>
+                                </div>
+                                <div class="w-[77px] pl-[5px] h-full flex items-center cursor-pointer hover:bg-[#F2F2F2]">
+                                    <img class="w-[35px] h-[35px] " src="share.png" alt="">
+                                    <p class="ml-[3px]">4.1K</p>
+                                </div>
+
+                            </div>
+                            <div class="w-[90px] pl-[25px] h-full flex items-center justify-center">
+                                <img class="w-[20px] border-[2px]  rounded-[35px] border-white" src="thumbs-upblue.png" alt="">
+                                <!-- <img class="w-[23px] h-[23px] ml-[-5px]" src="red-like.png" alt=""> -->
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+                    <!-- thirdpost  -->
+
+                        <div class="firstpost bg-white flex-1 min-h-[800px] rounded-[12px] shadow-md w-full mt-[10px] flex flex-col justify-between">
+                        <!-- header-section post -->
+                        <div class="w-full h-[90px] bg-transparent flex flex-col justify-center">
+                            <div class="w-full h-full pl-[12px] flex items-center justify-between font-poppins">
+                                <div class="flex w-[350px] h-[42px]">
+
+
+                                    <!-- profile -->
+                                    <img class="w-[41px] h-[41px] rounded-[41px] mt-[8px] cursor-pointer" src="juventus.jpg" alt="">
+
+
+
+                                    <div class="flex flex-col w-full h-full ">
+                                        <div class="flex items-center ml-[7px] gap-[0px] text-[14px] ">
+                                            <p class="cursor-pointer hover:underline">juventus</p> 
+                                        <div class="ml-[-5px] mt-[-3px]"> <img class="w-[30px] h-[30px]" src="verified.png" alt=""></div>
+                                            <div class="w-[2px] h-[2px] rounded-[2px] bg-black mt-[0px] ml-[-5px]"></div>
+                                            <p class="cursor-pointer hover:underline font-poppins ml-[5px] text-[#0064D1]">Follow</p> 
+                                        </div>
+                                        <div class="flex text-[12px] text-[#818487] items-center ml-[7px] mt-[-10px]">
+                                            <p class="cursor-pointer hover:underline">7 july at 15.30</p> 
+                                            <div class="w-[2px] h-[2px] rounded-[2px] bg-black ml-[4px] "></div>
+                                            <div class="ml-[-7px]"><img class="w-[35px] h-[35px]" src="earth.png" alt=""></div>  
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex mr-[20px] gap-[10px] mt-[5px] justify-center items-center">
+                                    <div class="w-[40px] h-[40px] rounded-[40px] hover:bg-[#F2F2F2] flex justify-center cursor-pointer items-center mr-[-10px]"><img class="w-[25px] h-[25px]" src="more.svg" alt=""></div>
+                                    <div class="w-[40px] h-[40px] rounded-[40px] hover:bg-[#F2F2F2] flex justify-center cursor-pointer items-center"><img class="w-[25px] h-[25px]" src="close.svg" alt=""></div>
+                                </div>
+                            </div>
+                            <div class="ml-[12px] mb-[8px]"><p class="font-poppins text-[14px] ">CR7's legacy lives on through the next generation 🤍🖤</p></div>
+                        </div>
+
+
+
+                        <!-- image using grid -->
+                        
+                        <div class="grid-items w-full h-fit bg-white">
+                            <div class="BOX flex justify-center items-center cursor-pointer" style="grid-area: box-1"><img class="object-cover w-full h-full" src="post1-3.jpg" alt=""></div>
+                            <div class="BOX flex justify-center items-center cursor-pointer" style="grid-area: box-2"><img class="object-cover w-full h-full" src="post2-3.jpg" alt=""></div>
+                            <div class="BOX flex justify-center items-center cursor-pointer" style="grid-area: box-3"><img class="object-cover w-full h-full" src="post3-3.jpg" alt=""></div>
+                            <div class="BOX flex justify-center items-center cursor-pointer" style="grid-area: box-4"><img class="object-cover w-full h-full" src="post4-3.jpg" alt=""></div>
+                            <div class="BOX relative flex justify-center items-center bg-black cursor-pointer" style="grid-area: box-5"><img class="object-cover opacity-50 w-full h-full " src="post5-3.jpg" alt=""><p class="absolute  text-[34px] text-[#ffffff]"><i class="bi bi-plus text-white text-[34px]"></i>30</p></div>
+                          
+
+
+
+
+                        </div>
+
+
+
+
+                        <div class="w-full h-[40px] justify-between  bg-transparent flex z-50">
+                            <div class="flex items-center text-[12px] text-[#606366] font-[500] font-poppins"> 
+                                <div class="w-[87px] pl-[5px] h-full flex items-center cursor-pointer hover:bg-[#F2F2F2] rounded-bl-[12px] ">
+                                    <img  class="w-[38px] h-[38px]" src="like.png" alt="">
+                                    <p>256K</p>
+                                </div>
+                                <div class="w-[80px] pl-[5px] h-full flex items-center cursor-pointer hover:bg-[#F2F2F2]">
+                                    <img class="w-[65px] h-[52px] ml-[-20px]" src="comment.png" alt="">
+                                    <p class="ml-[-15px]">1.6K</p>
+                                </div>
+                                <div class="w-[87px] pl-[5px] h-full flex items-center cursor-pointer hover:bg-[#F2F2F2]">
+                                    <img class="w-[35px] h-[35px] " src="share.png" alt="">
+                                    <p class="ml-[3px]">3.4K</p>
+                                </div>
+
+                            </div>
+                            <div class="w-[90px] pl-[25px] h-full flex items-center">
+                                <img class="w-[20px] border-[2px] z-50 rounded-[35px] border-white" src="thumbs-upblue.png" alt="">
+                                <img class="w-[23px] h-[23px] ml-[-5px]" src="red-like.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+
+
+                
+        </div>
 
     </div>
 </body>
