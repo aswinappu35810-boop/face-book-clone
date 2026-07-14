@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        /* .box1,
+
+
+
+        .box2,
+        .box6,
+
+
+
+        .box3,
+        .box4,
+
+        .box5{
+            background-color: blue;
+        }
+        .box */
+
+
+        .grid-items{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(5, 200px);
+            grid-template-areas: "box1 box1 box2"
+                                 "box3 box4 box4"
+                                 "box5 box4 box4"
+                                 "box5 box6 box7"
+                                 "box8 box9 box10";
+            gap: 16px;
+
+
+        }
+        .box{
+            background-color: #ff0000;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-items">
+        <div class="box1" style="grid-area: box1;"></div>
+        <div class="box2" style="grid-area: box2;"></div>
+        <div class="box3" style="grid-area: box3;"></div>
+        <div class="box" style="grid-area: box4;"></div>
+        <div class="box1" style="grid-area: box5;"></div>
+        <div class="box1" style="grid-area: box6;"></div>
+        <div class="box1" style="grid-area: box7;"></div>
+        <div class="box1" style="grid-area: box8;"></div>
+        <div class="box1" style="grid-area: box9;"></div>
+        <div class="box1" style="grid-area: box10;"></div>
+
+    </div>
+</body>
+</html>
